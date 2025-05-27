@@ -10,6 +10,7 @@ __pycache__/
 # Ignore ALL .env files and log files
 .env
 *.log
+.DS_Store
 
 # Ignore specific key files
 key

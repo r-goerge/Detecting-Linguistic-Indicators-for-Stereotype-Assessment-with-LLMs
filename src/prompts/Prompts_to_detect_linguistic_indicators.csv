@@ -1,0 +1,149 @@
+﻿prompt_id;category;system_role;explanation;instruction;examples
+P_F_01;Instruction_Full_Evaluation;You are a helpful assistant answering only in JSON-Output. ; A category label in a sentence is a linguistic label used to identify a given group of persons that refers to a demographic group or a specific or unspecific person that exist in reality.  Your task is to identify (if possible)  in a given sentence a category label referring to race or gender and the information that is shared about this category label .;"Given a sentence, answer the following questions step by step only  in  JSON-Format: 
+(1)  Evaluate whether the sentence has a category label that refers to a demographic group of people or an individual using only  'yes' or 'no'. Consider gender and race as a demographic group. Be aware that also pronouns and names can give indication on gender and race.
+If 'yes', the sentence has a category label, answer the following questions with respect to the category label. If the sentence has no category label  answer for all following questions using  'not-applicable'
+(2) Name the full  category label (including article)  used in the sentence to identify the group of people or the person. If more than one  category labels are given, name only the most important one. 
+(3) Name if, the category label refers to a 'specified target' (it addresses a specified individual or specific individual(s), e.g.Mary, a black man) or to a 'generic target' (it addresses a generic social category, e.g. Asians).
+ (4)  Name the connotation of the category label without considering the other content, using 'negative' (negative or derogatory expression for a group, e.g. those bitches), 'positive' (positive or glorifying expression to describe a category, e.g. the female heros), or 'neutral' (neural and objective expression to describe a category, e.g. the women). 
+(5) Name the grammatical from of the label itself, using ‘noun’ (category transported by a common noun potentially extended by adjectives e.g. Asians, a black girl ), or ‘other’ (category transported  by a proper noun, by a pronoun and an adjective e.g. Carlo, he, the person is black). 
+(6) Name the linguistic form of the label itself using 'generic' (referring to a demographic group or an unspecific respresentative of this group, e.g. men. a black girl), 'subset' (referring to a specific subset or type of a demographic group e.g. these Germans) or 'individual' (referring to one or several specific individual(s) who may be assumed to be a member of a demographic group, e.g. the black girl, Lotta).
+(7) Extract the exact information shared about the category label.  Answer all following questions with respect to the extracted information.
+(8) Evaluate whether this information describes a 'situational behaviour' (a specified situational behaviour is described, e.g. the girl helped her mother yesterday), an 'enduring characteristics' (a generalized behavioral or characteristics such as traits and qualities across situations are described  e.g. this girl is helpful, girls are helpful) or ‘other’ (neither a behaviour nora  characteristics  of the category label is described but for example an event or treatments  that occurs to the category label is described without influence of the category label itself   e.g. he was injured by the bomb). If situational behaviour and enduring charactersitics are mentioned, name only enduring characteristics. 
+If 'situational behaviour' or ‘enduring characteristics’, answer the following questions using only the shared information about the category label, otherwise answer with 'not-applicable': 
+(9) Evaluate  the linguistic  generalization of the exact shared information about the category label using 'abstract' (abstract terms such as state verbs or adjectives are used, e.g. she hates him, they are not able to do something) or 'concrete' (descriptive action verbs are used and refer to specific situations, e.g. she kicks him).  
+(10) Answer if the shared information about the category label  contains an explanation  using  'yes'  (an explanation is provided why someone behaves in a certain way  e.g.the girl is aggressive  as it was a hard day for her, he cannot drive as he did not have driving lessons) or 'no' (no explanation is given for the characteristic/behaviour, or the characteristic/behaviour  itself is used as an explanation eg. the girl is emotional, he is aggressive as he is male) only. 
+(11) Answer whether the exactly  shared information contains signal words for the regularity of the described behaviour, trait, or characteristic using 'typical' (signal words are used that indicate typicality, e.g. always, or indeed), 'exceptional' (signal words are used to indicate exceptionality, e.g. only this time, unexpectedly, today), or 'none' (no signal words are used).  ";"Sentence: It always rains in London. 
+ {
+  ""has_category_label"": ""no""
+ ""full_label"": ""not-applicable"",
+    ""target_type"": ""not-applicable
+    ""connotation"": ""not-applicable"",
+    ""grammatical_form"": ""not-applicable"",
+    ""linguistic_form"": ""not-applicable"",
+  ""information"": ""not-applicable"",
+  ""situation"": ""not-applicable"",
+  ""generalization"": ""not-applicable"",
+  ""explanation"": ""not-applicable"",
+  ""signal_word"": ""not-applicable""
+}
+
+Sentence: Young women are usually too emotional to make a decision! 
+{
+  ""has_category_label"": ""yes"",
+    ""full_label"": ""young women"",
+    ""target_type"": ""generic target"",
+    ""connotation"": ""neutral"",
+    ""grammatical_form"": ""noun"",
+    ""linguistic_form"": ""generic"",
+  ""information"": ""are usually too emotional to make a decision."",
+  ""situation"": ""enduring characteristics"",
+  ""generalization"": ""abstract"",
+  ""explanation"": ""no"",
+  ""signal_word"": ""typical""
+}
+
+Sentence: A black man came to the park and saw the girl, it was dangerous for her to be there. 
+{
+  ""has_category_label"": ""yes"",
+    ""full_label"": ""a black man"",
+    ""target_type"": ""specified target"",
+    ""connotation"": ""neutral"",
+    ""grammatical_form"": ""noun"",
+    ""linguistic_form"": ""generic"",
+  ""information"": ""came to the park and saw the girl"",
+  ""situation"": ""situational behaviour"",
+  ""generalization"": ""concrete"",
+  ""explanation"": ""no"",
+  ""signal_word"": ""none""
+}
+
+Sentence: Shaniqua spent the whole day at the salon getting her weave put in. She wanted to go on a date tonight. 
+ {
+  ""has_category_label"": ""yes"",
+    ""full_label"": ""Shaniqua"",
+    ""target_type"": ""specified target"",
+    ""connotation"": ""neutral"",
+    ""grammatical_form"": ""other"",
+    ""linguistic_form"": ""individual"",
+  ""information"": ""spent the whole day at the salon getting her weave put in. She wanted to go on a date."",
+  ""situation"": ""situational behaviour"",
+  ""generalization"": ""concrete"",
+  ""explanation"": ""yes"",
+  ""signal_word"": ""exceptional""
+}
+
+Sentence: She freaked out and was mad upon finding out that he betrayed her. 
+ {
+  ""has_category_label"": ""yes"",
+    ""full_label"": ""she"",
+    ""target_type"": ""specified target"",
+    ""connotation"": ""neutral"",
+    ""grammatical_form"": ""other"",
+    ""linguistic_form"": ""individual"",
+  ""information"": ""freaked out and was mad upon finding out that he betrayed her"",
+  ""situation"": ""situational behaviour"",
+  ""generalization"": ""abstract"",
+  ""explanation"": ""yes"",
+  ""signal_word"": ""none""
+}
+
+
+Sentence: These English gentlemen were always in time. 
+{
+  ""has_category_label_and_content"": ""yes"",   
+ ""full_label"": ""these english gentlemen"",
+    ""target_type"": ""specified target"",
+    ""connotation"": ""positive"",
+    ""grammatical_form"": ""noun"",
+    ""linguistic_form"": ""subset"",
+  ""information"": ""were always in time."",
+  ""situation"": ""enduring characteristics"",
+  ""generalization"": ""abstract"",
+  ""explanation"": ""no"",
+  ""signal_word"": ""typical""
+}
+
+Sentence: Women can finally make their voices heard. 
+ {
+  ""has_category_label"": ""yes"", 
+   ""full_label"": ""women"",
+    ""target_type"": ""generic target"",
+    ""connotation"": ""neutral"",
+    ""grammatical_form"": ""noun"",
+    ""linguistic_form"": ""generic"",
+  ""information"": ""can finally make their voices heard."",
+  ""situation"": ""other""
+ ""generalization"": ""not-applicable"",
+  ""explanation"": ""not-applicable"",
+  ""signal_word"": ""not-applicable""
+}
+
+Sentence: The black man couldn't get coffee at the shoppe.
+{
+  ""has_category_label"": ""yes"",
+  ""full_label"": ""the black man"",
+  ""target_type"": ""specified target"",
+  ""connotation"": ""neutral"",
+  ""grammatical_form"": ""noun"",
+  ""linguistic_form"": ""indivdual"",
+  ""information"": ""couldn't get coffee at the shoppe"",
+  ""situation"": ""other"",
+  ""generalization"": ""not-applicable"",
+  ""explanation"": ""not-applicable"",
+  ""signal_word"": ""not-applicable""
+}
+
+Sentence: A German meal is very heavy. 
+{
+  ""has_category_label"": ""no"",
+ ""full_label"": ""not-applicable"",
+    ""target_type"": ""not-applicable
+    ""connotation"": ""not-applicable"",
+    ""grammatical_form"": ""not-applicable"",
+    ""linguistic_form"": ""not-applicable"",
+  ""information"": ""not-applicable"",
+  ""situation"": ""not-applicable"",
+  ""generalization"": ""not-applicable"",
+  ""explanation"": ""not-applicable"",
+  ""signal_word"": ""not-applicable""
+}"

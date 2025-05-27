@@ -1,0 +1,19 @@
+# Ignore ALL files in ANY directory named data
+data/
+
+# Ignore ALL files in ANY directory named output
+output/
+
+# Ignore ALL files in ANY directory named pycache
+__pycache__/
+
+# Ignore ALL .env files and log files
+.env
+*.log
+
+# Ignore specific key files
+key
+key.pub
+
+# Ignore specific project files
+test.py

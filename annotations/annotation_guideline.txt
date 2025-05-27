@@ -1,0 +1,90 @@
+Given a sentence, answer the following questions step by step: 
+(1)  Evaluate whether the sentence has a category label that refers to a demographic group of people or an individual using only  'yes' or 'no'. Consider gender and ethnicity as a demographic group. Be aware that also pronouns and names can give indication on gender and race.
+If 'yes', the sentence has a category label, answer the following questions using  the category label only: 
+(2) Name the full category label (including article)  used in the sentence to identify the group of people or the person. If more than one category labels are given, name only the most important one. 
+(3) Name if, the category label refers to a 'specified target' (a clear link to a specified individual or specific individual(s), e.g Mary, a black man) or to a 'generic target' (it addresses a generic social category, e.g. Asians).
+ (4)  Name the connotation of this identified label itself, using 'negative' (negative or derogatory expression for a group, e.g. those bitches), 'positive' (positive or glorifying expression to describe a category, e.g. the winners), or 'neutral' (neural and objective expression to describe a category, e.g. the women). 
+(5) Name the grammatical from of the label itself, using ‘noun’ (category transported by a common noun potentially extended by adjectives e.g. Asians, a black girl ), or ‘other’ (category transported by a proper noun, by a pronoun and an adjective e.g .he, Carlo, the person  is black). 
+(6) Name the linguistic form of the label itself using 'generic' (referring to a demographic group or an unspecific representative of this group, e.g. men. a black girl), 'subtype' (referring to a specific subset or type of a demographic group e.g. these Germans) or 'individual' (referring to one or several specific individual(s) who may be assumed to be a member of a demographic group, e.g. the black girl, Lotta).
+(7) Extract the information shared about the category label. 
+(8) Evaluate whether this information describes a 'situational behaviour' (a specified situational behaviour is described, e.g. the girl helped her mother yesterday), an 'enduring characteristics' (generalized behavioral characteristics such as traits and qualities across situations are described  e.g. this girl is helpful, or, girls are helpful) or ‘other’ (neither a behaviour or characteristic of the category label is described but for example an event or treatments  that occurs to the category label is described without influence of the category label itself   e.g. he was injured by the bomb). If situational behaviour and enduring characteristics are mentioned, name only enduring characteristics. 
+If 'situational behaviour' or ‘enduring characteristics’, answer the following questions regarding the shared information about the category label, otherwise stop: 
+(9) Evaluate the generalization of the shared information about the category label using 'abstract' (abstract terms such as state verbs or adjectives are used, e.g. she hates him) or 'concrete' (descriptive action verbs are used and refer to specific situations, e.g. she kicks him).  
+(10) Answer whether the shared information about the category label contains an explanation that gives a reason for the behaviour, characteristic, or traits of the category label using 'yes' or 'no' only. 
+(11) Answer whether the shared information contains signal words for the regularity of the described behaviour, trait, or characteristic using 'typical' (signal words are used that indicate typicality, e.g. always, or indeed), 'exceptional' (signal words are used to indicate exceptionality, e.g. only this time, unexpectedly), or 'none' (no signal words are used).  
+
+Example 1:
+Sentence: ‘It always rains in London.‘
+(1) no
+ Example 2:
+Sentence: 'Young women are indeed too emotional to make a decision!'
+(1) yes
+(2) young women
+(3) generic target
+(4) neutral
+(5) noun
+(6) generic 
+(7) too emotional to make decision.
+(8) enduring characteristics
+(9) abstract
+(10) no
+(11) none
+Example 3: "A black man came to the park and saw the girl, it was dangerous for her to be there."
+(1) yes
+(2)a black man
+(3) specified target
+(4) neutral
+(5) noun
+(6) generic 
+(7) came to the park and saw the girl
+(8) situational behaviour
+(9) concrete
+(10) no
+(11) none
+Example 4: "Shaniqua spent the whole day at the salon getting her weave put in.  She wanted to go on a date tonight."
+(1) yes
+(2)Shaniqua
+(3) specified target
+(4) neutral
+(5) other
+(6) individual 
+(7) spent the whole day at the salon getting her weave put in. She wanted to go on a date. 
+(8) situational behaviour 
+(9 ) concrete
+(10) yes
+(11) exceptional (tonight)
+Example 5: "He freaked out and was mad upon finding out that she was pregnant."
+(1) yes
+(2)he
+(3) specified target 
+(4) neutral
+(5) other
+(6) individual 
+(7) freaked out
+(8) situational behaviour
+(9) abstract
+(10) yes
+(11) none
+Example 6 : "These English gentlemen were always in time."
+(1) yes
+(2) these English gentlemen
+(3) specified target 
+(4) positive
+(5) noun
+(6) subset
+(7) were always in time.
+(8) enduring characteristics 
+(9) abstract
+(10) no
+(11) typical (always)
+Example 7 : "Women can finally make their voices heard."
+(1) yes
+(2) women
+(3) generic target 
+(4) neutral
+(5) noun
+(6) generic
+(7) make their voices heard. 
+(8) other
+Example 8 : "A German meal is very heavy."
+(1) no

@@ -1,0 +1,11 @@
+asposestorage==1.0.2
+fire==0.7.0
+genai==2.1.0
+#genai[all] @ git+https://gitlab.cc-asp.fraunhofer.de/llm-hosting-iais/hosting-sdk.git@1.1.1
+joblib==1.4.2
+numpy==2.2.6
+openai==1.82.0
+pandas==2.2.3
+python-dotenv==1.1.0
+Requests==2.32.3
+tqdm==4.66.5

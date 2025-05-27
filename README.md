@@ -6,7 +6,7 @@
 [[PDF]]() [[arXiv]](https://arxiv.org/pdf/2502.19160)
 
 
-This is the official repository for our FAccT 2025 paper "Detecting Linguistic Indicators for Stereotype Assessment with Large Language Models". See `paper\DetectingLinguisticIndicatorsForStereotypeAssessmentWithLargeLanguageModels.pdf`.
+This is the official repository for our FAccT 2025 paper "Detecting Linguistic Indicators for Stereotype Assessment with Large Language Models". See `paper/DetectingLinguisticIndicatorsForStereotypeAssessmentWithLargeLanguageModels.pdf`.
 
 To detect linguistic indicators described in the SCSC categorization scheme, and to calculate the score_scsc for these stereotypes, please perform the following steps: 
 
@@ -19,7 +19,7 @@ pip install -r requirements.txt
 pip install -e .
 ```
 
-The code uses OpenAI Chat API as endpoint. To use GPT-4 or other OPEN AI models, rename .env.sample to .env and insert your API keys. 
+The code uses OpenAI Chat API as endpoint. To use GPT-4 or other OPEN AI models, rename `.env.sample` to `.env` and insert your API keys. 
 
 ## Evaluate the stereotypes in a given dataset
 
@@ -31,9 +31,9 @@ Run
 python stereotype_assessment.py 
 ```
 
-to query the LLM for the prompt that implements the SCSC categorization scheme. This function has the parameters  model_name (str), prompt_id (str), evaluate_linguistic_indcators (boolean), and score scsc (boolean). By default model_name is set to GPT-4.1, prompt_id is PF_01, evaluate_linuistuic_indicators is TRUE (meaning the linguistic indicators in a sentence are detected by the model) and the score_scsc is TRUE (meaning the score_scsc is determined for each sentence based on the linguistic indicators). To calculate the score_scsc, our linear regression model is used. The linear regression model is stored in `model\2025_02_linear_regression_model.joblib`.
+to query the LLM for the prompt that implements the SCSC categorization scheme. This function has the parameters  `model_name` (str), `prompt_id` (str), `evaluate_linguistic_indcators` (boolean), and `score scsc`(boolean). By default model_name is set to GPT-4.1, prompt_id is P_F_01, evaluate_linuistuic_indicators is TRUE (meaning the linguistic indicators in a sentence are detected by the model) and the score_scsc is TRUE (meaning the score_scsc is determined for each sentence based on the linguistic indicators). To calculate the score_scsc, our linear regression model is used. The linear regression model is stored in `model/2025_02_linear_regression_model.joblib`.
 
-Two output files are created as csv-file  in `output\postprocess` (containing the linguisitc indicators per sentence) and `output\score_scsc` (containing the linguisitc indicators per sentence and the score scsc).
+Two output files are created as csv-file  in `output/postprocess` (containing the linguisitc indicators per sentence) and `output/score_scsc` (containing the linguisitc indicators per sentence and the score scsc).
 
 ### Adaptions
 
@@ -43,7 +43,7 @@ Adapt `src/utils.py` to change the prompt and evaluation dataset path. By defaul
 
 #### Other models 
 
-To use other models, adapt setup.py and change the base_url (e.g., TogetherAI provides LLama familiy using the OpenAI Endpoint (https://docs.together.ai/docs/openai-api-compatibility)). 
+To use other models, adapt `src\setup.py` and change the base_url (e.g., TogetherAI provides LLama familiy using the OpenAI Endpoint (https://docs.together.ai/docs/openai-api-compatibility)). 
 
 #### Other prompts 
 
@@ -63,7 +63,6 @@ If you use or discuss our survey in your work, please use the following citation
   year={2025}
 }
 ```
-
 
 ## License
 
